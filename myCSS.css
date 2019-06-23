@@ -1,0 +1,612 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* HEADER*/
+header {
+    margin-left: 150px;  
+}
+#logo {
+    float: left;
+}
+/*đăng kí-đăng nhập-thời gian*/
+#one-line {
+    margin-left:700px;
+    margin-top: 10px;
+}
+#logo img {
+    width: 120px;
+    height: auto;
+}
+/*đăng kí-đăng nhập*/
+header ul li {
+    list-style-type: none;
+    float: left;
+}
+header ul li.li-sub {
+    border-right: 1px solid;
+}
+header ul li.li-reg {
+    border-left: 1px solid;
+}
+header ul li a {
+    text-decoration: none;
+    color: black;
+    margin: 17px;
+    font-size: 1.2vw;
+}
+#time {
+    color: rgb(201, 25, 25);
+}
+/*tạo hiệu ứng chữ trên logo (có js)*/
+.span-container {
+    position: absolute;
+    margin:-50px 0 0 100px;
+    text-shadow: 0px 1px 2px black;
+}
+.span-logo {
+    float: left;
+}
+.span-A {
+    color:rgb(116, 103, 103);
+    font-size: 2em;
+}
+.span-M {
+    color:rgb(245, 56, 9);
+    font-size: 2em;
+}
+.span-Sports {
+    font-size: 1.5em;
+    line-height: 1.8em;
+}
+.span-writing {
+    font-size: 1.5em;
+    line-height: 1.8em;
+    animation: writing 0.7s infinite;
+    -webkit-animation: writing 0.7s infinite;
+    text-shadow: none;
+}
+@keyframes writing {
+    from {opacity: 1;}
+    to { opacity: 0;}
+}
+@-webkit-keyframes writing {
+    from {opacity: 1;}
+    to { opacity: 0;}
+}
+header .slogan {
+    position: absolute;
+    margin:80px 0 0 450px;
+    clear: both;
+    font-size: 1.3em;
+    display: inline;
+    font-style: italic;
+    color: rgb(65, 165, 165);
+}
+/* thanh điều hướng */
+#navbar .parent-ul{
+    margin-top: 115px;
+    width: 1000px;
+    clear: both;
+    background: rgb(223, 100, 100);
+    margin-left:10%;
+    border-bottom: 1px solid yellow;
+}
+#navbar .parent-ul .parent-list{
+    display: inline;
+    margin-left: 10px;
+    padding: 10px;
+    position: relative;
+}
+#navbar .parent-ul .parent-list .parent-link{
+    color: white;
+    text-decoration: none;
+}
+#navbar .parent-ul .parent-list .parent-link:hover, .a-sub:hover, .a-reg:hover {
+    color: rgb(233, 233, 59);
+}
+#navbar .parent-ul .parent-list:first-child .parent-link {
+    font-size: 1.8em;
+    padding-right: 12px;
+}
+/* menu con của thanh điều hướng */
+.child-ul {
+    display: none;
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 32px;
+    background:  rgb(151, 122, 122);
+}
+.child-ul .child-list {
+    list-style-type: none;
+    padding: 10px;
+}
+.child-ul .child-list .child-link {
+    text-decoration: none;
+    color: white;
+}
+.child-ul .child-list .child-link:hover {
+    color: rgb(233, 233, 59);
+}
+#navbar .parent-ul .parent-list:hover .child-ul {
+    display: block;
+}
+/* slideshow (có js)*/
+#slideshow .slide-image {
+    width: 100%;
+    height: 400px;
+}
+#slideshow .slide-title {
+    text-align: left;
+    margin:-12% 0 0 4%;
+    color: rgb(217, 230, 49);
+    font-size: 2vw;
+    height: 10%;
+}
+.switch span {
+    color: rgb(245, 37, 37);
+    font-size: 3vw;
+    cursor: pointer;
+}
+.switch span:hover {
+    color: rgb(27, 221, 221);
+}
+.switch .prev {
+    position: absolute;
+    margin:-20% 0 0 2%;
+}
+.switch .next {
+    position: absolute;
+    margin:-20% 0 0 50%;
+}
+/*Nội dung bên trái bao gồm các tin tức, slideshow*/
+#left {
+    float: left;
+    width: 53%;
+    margin: 20px 0 0 10%;
+}
+/*Main contents*/
+#left #main-contents {
+    margin: 10% 0 0 0;
+}
+#left #main-contents .content {
+    height: 190px;
+    margin: 10% 0 0 0;
+    border-bottom: 1px solid rgb(214, 202, 202);
+}
+#left #main-contents .content img {
+    float: left;
+    width: 42%;
+    height: 150px;
+    padding-right: 20px;
+}
+#left #main-contents .content .description-content {
+    text-align: justify;
+    float: right;
+    width: 58%;
+    height: 180px;
+    overflow: auto;
+}
+#left #main-contents .content .description-content a {
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: black;
+}
+#left #main-contents .content .description-content p {
+    opacity: .8;
+    font-size: 0.92em;
+    font-style: italic;
+    line-height: 22px;
+}
+#left #main-contents .content .description-content .span-brand {
+    background: rgb(187, 90, 90);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3vw;
+    border: 3px solid rgb(187, 90, 90);
+}
+#left #main-contents .content .description-content .span-date {
+    margin-left: 30px;
+    font-style: italic;
+    font-size: 1.2vw;
+}
+/* hot contents cho phép mở rộng nội dung (có js)*/
+#hot-contents {
+    background: rgb(12, 18, 68);
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+#hot-contents .title-hot-contents {
+    height: 40px;
+    background: rgb(19, 7, 128);
+    border-left: 8px solid rgb(255, 4, 4);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 40px;
+}
+#left #hot-contents .content {
+    width: 100%;
+    height: 185px;
+    margin: 50px 0 0 0;
+    border-bottom: 1px solid rgb(112, 107, 107);
+}
+#left #hot-contents .content img {
+    float: left;
+    width: 42%;
+    height: 150px;
+    padding: 0 20px 0 20px;
+}
+#left #hot-contents .content .description-content {
+    text-align: justify;
+    float: right;
+    width: 58%;
+    height: 180px;
+    overflow: auto;
+}
+#left #hot-contents .content .description-content a {
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding-right: 10px;
+}
+#left #hot-contents .content .description-content p {
+    opacity: .8;
+    font-size: 0.92em;
+    font-style: italic;
+    line-height: 22px;
+    padding-right: 10px;
+    color: rgb(141, 133, 133);
+}
+#left #hot-contents .content .description-content .span-brand {
+    background: rgb(187, 90, 90);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3vw;
+    border: 3px solid rgb(187, 90, 90);
+}
+#left #hot-contents .content .description-content .span-date {
+    margin-left: 30px;
+    font-style: italic;
+    font-size: 1.2vw;
+    color: white;
+}
+/*thanh mở rộng hot contents */
+#left #hot-contents .more-content {
+    width: 100%;
+    height: 25px;
+    background: rgb(151, 145, 145);
+    line-height: 25px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+#left #hot-contents .more-content:hover {
+    background:rgb(19, 7, 128) ;
+    color: white;
+    transition: all 0.5s;
+}
+/* nội dung bên phải bao gồm news list, lich thi đấu, quảng cáo...*/
+#right {
+    position: absolute;
+    width: 22%;
+    left: 65%;
+    margin-top: 20px;
+}
+/*lich thi đấu bóng đá */
+#right .time-match, th, td {
+    border: 1px solid rgb(228, 223, 223);
+    border-collapse: collapse;
+}
+#right .time-match tr td img {
+    width: 10%;
+}
+#right .time-match tr td {
+    font-size: 1.1vw;
+    padding: 2px;
+}
+#right .time-match tr td a {
+    text-decoration: none;
+    margin-left: 10px;
+    line-height: 10px;
+    color: black;
+}
+#right .time-match tr td a:hover {
+    text-decoration: underline;
+}
+/* danh sách tin tức */
+.news-table {
+    width: 100%;
+    margin-top: 255px;
+}
+.news-table tr th {
+    color: white;
+    border-left: 8px solid rgb(255, 4, 4);
+    background: rgb(19, 7, 128);
+    height: 40px;
+    margin-top: 230px;
+}
+.news-table tr td {
+    border: none;
+    padding: 5px;
+    border-bottom: 1px dashed rgb(189, 186, 186);
+}
+.news-table tr td .news-time {
+    background: red;
+    color: white;
+    font-size: 1.1vw;
+    border-radius: 5px;
+    border: red;
+}
+.news-table tr td .news-link {
+    text-decoration: none;
+    font-size: 1.2vw;
+    margin-left: 10px;
+    text-align: justify;
+    color: black;
+}
+.news-table tr td .news-link:hover {
+    text-decoration: underline;
+}
+/*phần nội dung bên dưới của body cho phép chọn nội dung cần kiếm (có js)*/
+#bottom {
+    clear: both;
+    width: 77%;
+    margin:0 0 0 10%;
+    padding-top: 40px;
+}
+#bottom .menu-bottom .link-bottom{
+    display: inline;
+    padding: 10px;
+    border: 1px solid rgb(230, 226, 224);
+    border-bottom: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+    color: rgb(238, 120, 41);
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+#bottom .menu-bottom .link-bottom:hover {
+    background: rgb(241, 238, 238);
+    transition: all 0.3s;
+}
+/*.active hiệu ứng khi click vào (js)*/
+.active {
+    background-color: rgb(157, 229, 247);
+}
+#bottom .item-bottom-container .item-bottom img {
+    width: 100%;
+    padding: 15px;
+    height: 200px;
+}
+#bottom .item-bottom-container .item-bottom {
+    width: 24.5%;
+    margin-top: 20px;
+    float: left;
+    border: 1px solid rgb(234, 235, 230);
+    border-collapse: collapse;
+    margin-left: 3px;
+}
+#bottom .item-bottom-container .item-bottom a,
+#bottom .item-bottom-container .item-bottom p {
+    padding-left: 15px;
+}
+
+/* phần bên phải website bao gồm các liên hệ, quay về top(có js)*/
+aside {
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 12.5%;
+    height: 100%;
+}
+/* transform tạo hiệu ứng Liên hệ quảng cáo */
+aside .ads {
+    position: absolute;
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    top: 10%;
+    left: 9%;
+    animation: ads-animate 8s 2s infinite;
+}
+@keyframes ads-animate {
+    0% {transform: scale(0.7,0.7)}
+    25% {transform: scale(1.1,1.1);background: rgb(255, 0, 0);opacity: .4;}
+    50% {transform: scale(0.7,0.7)}
+    100% {transform: scale(1.1,1.1);background: rgb(12, 182, 250);opacity: .6;}
+}
+/*một thẻ div tròn trắng bên trong div tròn lớn hơn tạo nội dung ads*/
+aside .ads-content {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 12%;
+    left: 16.5%;
+    text-align: center;
+}
+aside .ads-content a {
+    line-height: 40px;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+/* các liên hệ khác bao gồm fb, Tw, Ig, Yt*/
+aside .icon-container {
+    position: absolute; 
+    top: 40%;
+    left: 40%;
+}
+aside .icon-container img {
+    width: 30px;
+    display: block;
+    margin-top: 12%;
+}
+/* quay trở về top*/
+aside a .backtop {
+    width: 40%;
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+}
+/* phần cuối trang bao gồm các liên kết, thông tin quản lý website*/
+footer {
+    clear: both;
+    width: 100%;
+    height: 250px;
+    background: rgb(238, 234, 234);
+    border-top: 20px solid white;
+}
+/*danh sách liên kết*/
+footer .menu-footer {
+    margin-left: 10%;
+}
+footer .menu-footer .menu-link {
+    float: left;
+    width: 21.3%;
+    margin-top: 30px;
+}
+footer .menu-footer .menu-link .link {
+    margin-top: 15px;
+}
+footer .menu-footer .menu-link .link a {
+    text-decoration: none;
+    font-size: 1.1vw;
+    color: rgb(102, 100, 100);
+}
+footer .menu-footer .menu-link .link a:hover {
+    text-decoration: underline;
+}
+/* một đường gạch ngang phân cách 2 phần footer*/
+footer .horizontal-footer {
+    width: 100%;
+    height:5px;
+    background: rgb(185, 6, 6);
+    margin:260px 0 0 0;
+}
+/* thông tin website*/
+.logo-footer img{
+    width: 15%;
+    margin:0 0 0 42%;
+}
+footer .amsports-info {
+    width: 77%;
+    height: 180px;
+    margin-left: 10%;
+}   
+footer .amsports-info .info-left {
+    width: 45%;
+    float: left;
+}
+footer .amsports-info .info-left p {
+    font-size: 1vw;
+    font-weight: bold;
+    line-height: 23px;
+}
+footer .amsports-info .info-right {
+    width: 45%;
+    float: right;
+}
+footer .amsports-info .info-right p {
+    font-size: 1vw;
+    line-height: 23px;
+}
+footer .amsports-info .info-right p span {
+    font-weight: bolder;
+}
+/* modal đăng nhập, được hiện ra khi click vào đăng nhập */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #ffffff;
+    margin: 0 auto 15% auto;
+    border: 1px solid rgb(151, 149, 149);
+    width: 30%;
+    height: auto;
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
